@@ -15,6 +15,8 @@
 		5B2B64291BD7E43900B79549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2B64271BD7E43900B79549 /* LaunchScreen.storyboard */; };
 		5B2B64341BD7E43900B79549 /* FootballFlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B64331BD7E43900B79549 /* FootballFlixTests.swift */; };
 		5B2B643F1BD7E43900B79549 /* FootballFlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B643E1BD7E43900B79549 /* FootballFlixUITests.swift */; };
+		5B2B645E1BD7E5CB00B79549 /* FTWCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B645B1BD7E5CB00B79549 /* FTWCache.m */; settings = {ASSET_TAGS = (); }; };
+		5B2B645F1BD7E5CB00B79549 /* UIImageView+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B645D1BD7E5CB00B79549 /* UIImageView+Network.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,11 @@
 		5B2B643A1BD7E43900B79549 /* FootballFlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballFlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2B643E1BD7E43900B79549 /* FootballFlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballFlixUITests.swift; sourceTree = "<group>"; };
 		5B2B64401BD7E43900B79549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B2B64531BD7E4C600B79549 /* FootballFlix-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FootballFlix-Bridging-Header.h"; sourceTree = "<group>"; };
+		5B2B645A1BD7E5CB00B79549 /* FTWCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTWCache.h; sourceTree = "<group>"; };
+		5B2B645B1BD7E5CB00B79549 /* FTWCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWCache.m; sourceTree = "<group>"; };
+		5B2B645C1BD7E5CB00B79549 /* UIImageView+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Network.h"; sourceTree = "<group>"; };
+		5B2B645D1BD7E5CB00B79549 /* UIImageView+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Network.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +106,7 @@
 		5B2B641B1BD7E43900B79549 /* FootballFlix */ = {
 			isa = PBXGroup;
 			children = (
+				5B2B64591BD7E4E200B79549 /* bin */,
 				5B2B641C1BD7E43900B79549 /* AppDelegate.swift */,
 				5B2B641E1BD7E43900B79549 /* MasterViewController.swift */,
 				5B2B64201BD7E43900B79549 /* DetailViewController.swift */,
@@ -126,6 +134,18 @@
 				5B2B64401BD7E43900B79549 /* Info.plist */,
 			);
 			path = FootballFlixUITests;
+			sourceTree = "<group>";
+		};
+		5B2B64591BD7E4E200B79549 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				5B2B645A1BD7E5CB00B79549 /* FTWCache.h */,
+				5B2B645B1BD7E5CB00B79549 /* FTWCache.m */,
+				5B2B645C1BD7E5CB00B79549 /* UIImageView+Network.h */,
+				5B2B645D1BD7E5CB00B79549 /* UIImageView+Network.m */,
+				5B2B64531BD7E4C600B79549 /* FootballFlix-Bridging-Header.h */,
+			);
+			name = bin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +210,7 @@
 		5B2B64111BD7E43900B79549 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "John Tunisi";
 				TargetAttributes = {
@@ -260,7 +281,9 @@
 			files = (
 				5B2B64211BD7E43900B79549 /* DetailViewController.swift in Sources */,
 				5B2B641F1BD7E43900B79549 /* MasterViewController.swift in Sources */,
+				5B2B645E1BD7E5CB00B79549 /* FTWCache.m in Sources */,
 				5B2B641D1BD7E43900B79549 /* AppDelegate.swift in Sources */,
+				5B2B645F1BD7E5CB00B79549 /* UIImageView+Network.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,10 +423,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FootballFlix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.gvsu.FootballFlix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FootballFlix/FootballFlix-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -411,10 +437,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FootballFlix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.gvsu.FootballFlix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FootballFlix/FootballFlix-Bridging-Header.h";
 			};
 			name = Release;
 		};
