@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B2B641D1BD7E43900B79549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B641C1BD7E43900B79549 /* AppDelegate.swift */; };
+		5B2B641F1BD7E43900B79549 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B641E1BD7E43900B79549 /* MasterViewController.swift */; };
+		5B2B64211BD7E43900B79549 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B64201BD7E43900B79549 /* DetailViewController.swift */; };
+		5B2B64241BD7E43900B79549 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2B64221BD7E43900B79549 /* Main.storyboard */; };
+		5B2B64261BD7E43900B79549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2B64251BD7E43900B79549 /* Assets.xcassets */; };
+		5B2B64291BD7E43900B79549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2B64271BD7E43900B79549 /* LaunchScreen.storyboard */; };
+		5B2B64341BD7E43900B79549 /* FootballFlixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B64331BD7E43900B79549 /* FootballFlixTests.swift */; };
+		5B2B643F1BD7E43900B79549 /* FootballFlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B643E1BD7E43900B79549 /* FootballFlixUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B2B64301BD7E43900B79549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B2B64111BD7E43900B79549 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B2B64181BD7E43900B79549;
+			remoteInfo = FootballFlix;
+		};
+		5B2B643B1BD7E43900B79549 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B2B64111BD7E43900B79549 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B2B64181BD7E43900B79549;
+			remoteInfo = FootballFlix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B2B64191BD7E43900B79549 /* FootballFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B2B641C1BD7E43900B79549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B2B641E1BD7E43900B79549 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		5B2B64201BD7E43900B79549 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5B2B64231BD7E43900B79549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B2B64251BD7E43900B79549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B2B64281BD7E43900B79549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B2B642A1BD7E43900B79549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B2B642F1BD7E43900B79549 /* FootballFlixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballFlixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B2B64331BD7E43900B79549 /* FootballFlixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballFlixTests.swift; sourceTree = "<group>"; };
+		5B2B64351BD7E43900B79549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B2B643A1BD7E43900B79549 /* FootballFlixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballFlixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B2B643E1BD7E43900B79549 /* FootballFlixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballFlixUITests.swift; sourceTree = "<group>"; };
+		5B2B64401BD7E43900B79549 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B2B64161BD7E43900B79549 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B2B642C1BD7E43900B79549 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B2B64371BD7E43900B79549 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B2B64101BD7E43900B79549 = {
+			isa = PBXGroup;
+			children = (
+				5B2B641B1BD7E43900B79549 /* FootballFlix */,
+				5B2B64321BD7E43900B79549 /* FootballFlixTests */,
+				5B2B643D1BD7E43900B79549 /* FootballFlixUITests */,
+				5B2B641A1BD7E43900B79549 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B2B641A1BD7E43900B79549 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B2B64191BD7E43900B79549 /* FootballFlix.app */,
+				5B2B642F1BD7E43900B79549 /* FootballFlixTests.xctest */,
+				5B2B643A1BD7E43900B79549 /* FootballFlixUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B2B641B1BD7E43900B79549 /* FootballFlix */ = {
+			isa = PBXGroup;
+			children = (
+				5B2B641C1BD7E43900B79549 /* AppDelegate.swift */,
+				5B2B641E1BD7E43900B79549 /* MasterViewController.swift */,
+				5B2B64201BD7E43900B79549 /* DetailViewController.swift */,
+				5B2B64221BD7E43900B79549 /* Main.storyboard */,
+				5B2B64251BD7E43900B79549 /* Assets.xcassets */,
+				5B2B64271BD7E43900B79549 /* LaunchScreen.storyboard */,
+				5B2B642A1BD7E43900B79549 /* Info.plist */,
+			);
+			path = FootballFlix;
+			sourceTree = "<group>";
+		};
+		5B2B64321BD7E43900B79549 /* FootballFlixTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B2B64331BD7E43900B79549 /* FootballFlixTests.swift */,
+				5B2B64351BD7E43900B79549 /* Info.plist */,
+			);
+			path = FootballFlixTests;
+			sourceTree = "<group>";
+		};
+		5B2B643D1BD7E43900B79549 /* FootballFlixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B2B643E1BD7E43900B79549 /* FootballFlixUITests.swift */,
+				5B2B64401BD7E43900B79549 /* Info.plist */,
+			);
+			path = FootballFlixUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B2B64181BD7E43900B79549 /* FootballFlix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B2B64431BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlix" */;
+			buildPhases = (
+				5B2B64151BD7E43900B79549 /* Sources */,
+				5B2B64161BD7E43900B79549 /* Frameworks */,
+				5B2B64171BD7E43900B79549 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FootballFlix;
+			productName = FootballFlix;
+			productReference = 5B2B64191BD7E43900B79549 /* FootballFlix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B2B642E1BD7E43900B79549 /* FootballFlixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B2B64461BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlixTests" */;
+			buildPhases = (
+				5B2B642B1BD7E43900B79549 /* Sources */,
+				5B2B642C1BD7E43900B79549 /* Frameworks */,
+				5B2B642D1BD7E43900B79549 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B2B64311BD7E43900B79549 /* PBXTargetDependency */,
+			);
+			name = FootballFlixTests;
+			productName = FootballFlixTests;
+			productReference = 5B2B642F1BD7E43900B79549 /* FootballFlixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B2B64391BD7E43900B79549 /* FootballFlixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B2B64491BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlixUITests" */;
+			buildPhases = (
+				5B2B64361BD7E43900B79549 /* Sources */,
+				5B2B64371BD7E43900B79549 /* Frameworks */,
+				5B2B64381BD7E43900B79549 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B2B643C1BD7E43900B79549 /* PBXTargetDependency */,
+			);
+			name = FootballFlixUITests;
+			productName = FootballFlixUITests;
+			productReference = 5B2B643A1BD7E43900B79549 /* FootballFlixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B2B64111BD7E43900B79549 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "John Tunisi";
+				TargetAttributes = {
+					5B2B64181BD7E43900B79549 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					5B2B642E1BD7E43900B79549 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 5B2B64181BD7E43900B79549;
+					};
+					5B2B64391BD7E43900B79549 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 5B2B64181BD7E43900B79549;
+					};
+				};
+			};
+			buildConfigurationList = 5B2B64141BD7E43900B79549 /* Build configuration list for PBXProject "FootballFlix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B2B64101BD7E43900B79549;
+			productRefGroup = 5B2B641A1BD7E43900B79549 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B2B64181BD7E43900B79549 /* FootballFlix */,
+				5B2B642E1BD7E43900B79549 /* FootballFlixTests */,
+				5B2B64391BD7E43900B79549 /* FootballFlixUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B2B64171BD7E43900B79549 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2B64291BD7E43900B79549 /* LaunchScreen.storyboard in Resources */,
+				5B2B64261BD7E43900B79549 /* Assets.xcassets in Resources */,
+				5B2B64241BD7E43900B79549 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B2B642D1BD7E43900B79549 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B2B64381BD7E43900B79549 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B2B64151BD7E43900B79549 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2B64211BD7E43900B79549 /* DetailViewController.swift in Sources */,
+				5B2B641F1BD7E43900B79549 /* MasterViewController.swift in Sources */,
+				5B2B641D1BD7E43900B79549 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B2B642B1BD7E43900B79549 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2B64341BD7E43900B79549 /* FootballFlixTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B2B64361BD7E43900B79549 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B2B643F1BD7E43900B79549 /* FootballFlixUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B2B64311BD7E43900B79549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B2B64181BD7E43900B79549 /* FootballFlix */;
+			targetProxy = 5B2B64301BD7E43900B79549 /* PBXContainerItemProxy */;
+		};
+		5B2B643C1BD7E43900B79549 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B2B64181BD7E43900B79549 /* FootballFlix */;
+			targetProxy = 5B2B643B1BD7E43900B79549 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B2B64221BD7E43900B79549 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B2B64231BD7E43900B79549 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B2B64271BD7E43900B79549 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B2B64281BD7E43900B79549 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B2B64411BD7E43900B79549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B2B64421BD7E43900B79549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B2B64441BD7E43900B79549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FootballFlix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gvsu.FootballFlix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5B2B64451BD7E43900B79549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FootballFlix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gvsu.FootballFlix;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5B2B64471BD7E43900B79549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FootballFlixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gvsu.FootballFlixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballFlix.app/FootballFlix";
+			};
+			name = Debug;
+		};
+		5B2B64481BD7E43900B79549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FootballFlixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gvsu.FootballFlixTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballFlix.app/FootballFlix";
+			};
+			name = Release;
+		};
+		5B2B644A1BD7E43900B79549 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FootballFlixUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gvsu.FootballFlixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FootballFlix;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5B2B644B1BD7E43900B79549 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FootballFlixUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.gvsu.FootballFlixUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FootballFlix;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B2B64141BD7E43900B79549 /* Build configuration list for PBXProject "FootballFlix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2B64411BD7E43900B79549 /* Debug */,
+				5B2B64421BD7E43900B79549 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B2B64431BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2B64441BD7E43900B79549 /* Debug */,
+				5B2B64451BD7E43900B79549 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B2B64461BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2B64471BD7E43900B79549 /* Debug */,
+				5B2B64481BD7E43900B79549 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B2B64491BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B2B644A1BD7E43900B79549 /* Debug */,
+				5B2B644B1BD7E43900B79549 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B2B64111BD7E43900B79549 /* Project object */;
+}
