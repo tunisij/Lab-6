@@ -43,7 +43,7 @@ class MasterViewController: UITableViewController {
     func loadVideos()
     {
         // Get ready to fetch the list of dog videos from YouTube V3 Data API.
-        let url = NSURL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=puppies&type=youtube%23video&key=AIzaSyD1XU4ZU1-j13MYNYCHp2eNFFMpVOPF9-c")
+        let url = NSURL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=college+football&type=channel&key=AIzaSyCRONSh1St96OARUlZSJiWfi6EAhaFEPZw")
         let session = NSURLSession.sharedSession()
         let task = session.downloadTaskWithURL(url!) {
             (loc:NSURL?, response:NSURLResponse?, error:NSError?) in
@@ -125,7 +125,6 @@ class MasterViewController: UITableViewController {
                 
                 // setup text.
                 cell.textLabel!.text = snippet["title"] as? String
-                cell.detailTextLabel!.text = snippet["description"] as? String
                 
                 // fetch image
                 cell.imageView?.image = UIImage(named:"YouTubeIcon")
