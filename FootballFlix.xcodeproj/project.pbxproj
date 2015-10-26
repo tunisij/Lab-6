@@ -17,6 +17,7 @@
 		5B2B643F1BD7E43900B79549 /* FootballFlixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B643E1BD7E43900B79549 /* FootballFlixUITests.swift */; };
 		5B2B645E1BD7E5CB00B79549 /* FTWCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B645B1BD7E5CB00B79549 /* FTWCache.m */; settings = {ASSET_TAGS = (); }; };
 		5B2B645F1BD7E5CB00B79549 /* UIImageView+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B645D1BD7E5CB00B79549 /* UIImageView+Network.m */; settings = {ASSET_TAGS = (); }; };
+		5B306E391BDD7FFF00B8AF95 /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B306E381BDD7FFF00B8AF95 /* VideoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		5B2B645B1BD7E5CB00B79549 /* FTWCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTWCache.m; sourceTree = "<group>"; };
 		5B2B645C1BD7E5CB00B79549 /* UIImageView+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Network.h"; sourceTree = "<group>"; };
 		5B2B645D1BD7E5CB00B79549 /* UIImageView+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Network.m"; sourceTree = "<group>"; };
+		5B306E381BDD7FFF00B8AF95 /* VideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				5B2B641C1BD7E43900B79549 /* AppDelegate.swift */,
 				5B2B641E1BD7E43900B79549 /* MasterViewController.swift */,
 				5B2B64201BD7E43900B79549 /* DetailViewController.swift */,
+				5B306E381BDD7FFF00B8AF95 /* VideoTableViewController.swift */,
 				5B2B64221BD7E43900B79549 /* Main.storyboard */,
 				5B2B64251BD7E43900B79549 /* Assets.xcassets */,
 				5B2B64271BD7E43900B79549 /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B2B64211BD7E43900B79549 /* DetailViewController.swift in Sources */,
+				5B306E391BDD7FFF00B8AF95 /* VideoTableViewController.swift in Sources */,
 				5B2B641F1BD7E43900B79549 /* MasterViewController.swift in Sources */,
 				5B2B645E1BD7E5CB00B79549 /* FTWCache.m in Sources */,
 				5B2B641D1BD7E43900B79549 /* AppDelegate.swift in Sources */,
@@ -513,6 +517,7 @@
 				5B2B64451BD7E43900B79549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B2B64461BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlixTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +526,7 @@
 				5B2B64481BD7E43900B79549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B2B64491BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlixUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +535,7 @@
 				5B2B644B1BD7E43900B79549 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

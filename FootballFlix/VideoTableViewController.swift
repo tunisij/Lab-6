@@ -1,28 +1,42 @@
 //
-//  MasterViewController.swift
+//  VideoTableViewController.swift
 //  FootballFlix
 //
-//  Created by John Tunisi on 10/21/15.
+//  Created by John Tunisi on 10/25/15.
 //  Copyright © 2015 John Tunisi. All rights reserved.
 //
 
-import UIKit
 
-class MasterViewController: UITableViewController {
+class VideoTableViewController: UITableViewController {
     
     var tableViewController: UITableViewController? = nil
     var objects = [AnyObject]()
+    var channelId: String? = nil
     
+    
+    var detailItem: Dictionary<String, AnyObject>? {
+        didSet {
+            // Update the view.
+            self.configureView()
+        }
+    }
+    
+    func configureView() {
+        // Update the user interface for the detail item.
+        if let detail = self.detailItem {
+            if let id = detail["id"] as? Dictionary<String,AnyObject> {
+                if let localChannelId = id["channelId"] as? String {
+                    channelId = localChannelId
+                }
+                loadVideos(channelId!)
+                
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.tableViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? UITableViewController
-        }
-        
-        self.loadVideos()
+        self.configureView()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -35,13 +49,13 @@ class MasterViewController: UITableViewController {
     }
     
     @IBAction func pullToRefreshActivated(sender: UIRefreshControl) {
-        self.loadVideos();
+        self.loadVideos(channelId!);
         sender.endRefreshing();
     }
     
-    func loadVideos() {
+    func loadVideos(channelId: String) {
         // Get ready to fetch the list of dog videos from YouTube V3 Data API.
-        let url = NSURL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=30&q=college+football&type=channel&key=AIzaSyCRONSh1St96OARUlZSJiWfi6EAhaFEPZw")
+        let url = NSURL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=\(channelId)&key=AIzaSyCRONSh1St96OARUlZSJiWfi6EAhaFEPZw")
         let session = NSURLSession.sharedSession()
         let task = session.downloadTaskWithURL(url!) {
             (loc:NSURL?, response:NSURLResponse?, error:NSError?) in
@@ -94,10 +108,10 @@ class MasterViewController: UITableViewController {
     // MARK: - Segues
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showVideos" {
+        if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] as! Dictionary<String, AnyObject>
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! VideoTableViewController
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
@@ -116,13 +130,14 @@ class MasterViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ChannelCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("VideoCell", forIndexPath: indexPath)
         
         if let object = objects[indexPath.row] as? Dictionary<String, AnyObject> {
             if let snippet = object["snippet"] as? Dictionary<String, AnyObject> {
                 
                 // setup text.
                 cell.textLabel!.text = snippet["title"] as? String
+                cell.detailTextLabel!.text = snippet["description"] as? String
                 
                 // fetch image
                 cell.imageView?.image = UIImage(named:"YouTubeIcon")
@@ -140,9 +155,4 @@ class MasterViewController: UITableViewController {
         
         return cell
     }
-    
-    
-    
-    
 }
-
