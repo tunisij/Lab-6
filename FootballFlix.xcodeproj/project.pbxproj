@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0E9DF71BE031B1008448A7 /* youtube_ios_player_helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B0E9DF61BE031B1008448A7 /* youtube_ios_player_helper.framework */; };
+		5B0E9DF91BE031DD008448A7 /* videoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0E9DF81BE031DD008448A7 /* videoPlayerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		5B2B641D1BD7E43900B79549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B641C1BD7E43900B79549 /* AppDelegate.swift */; };
 		5B2B641F1BD7E43900B79549 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B641E1BD7E43900B79549 /* MasterViewController.swift */; };
 		5B2B64211BD7E43900B79549 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B64201BD7E43900B79549 /* DetailViewController.swift */; };
@@ -18,6 +20,7 @@
 		5B2B645E1BD7E5CB00B79549 /* FTWCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B645B1BD7E5CB00B79549 /* FTWCache.m */; settings = {ASSET_TAGS = (); }; };
 		5B2B645F1BD7E5CB00B79549 /* UIImageView+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B645D1BD7E5CB00B79549 /* UIImageView+Network.m */; settings = {ASSET_TAGS = (); }; };
 		5B306E391BDD7FFF00B8AF95 /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B306E381BDD7FFF00B8AF95 /* VideoTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C9B6F1833780359B7D80FD95 /* Pods_FootballFlix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF005BCC2A79785E8E90B415 /* Pods_FootballFlix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		47DB36B5997CD8ECD83EA6FC /* Pods-FootballFlix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballFlix.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootballFlix/Pods-FootballFlix.release.xcconfig"; sourceTree = "<group>"; };
+		5B0E9DF61BE031B1008448A7 /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = youtube_ios_player_helper.framework; path = "Pods/../build/Debug-iphoneos/youtube_ios_player_helper.framework"; sourceTree = "<group>"; };
+		5B0E9DF81BE031DD008448A7 /* videoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoPlayerViewController.swift; sourceTree = "<group>"; };
 		5B2B64191BD7E43900B79549 /* FootballFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2B641C1BD7E43900B79549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B2B641E1BD7E43900B79549 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,8 @@
 		5B2B645C1BD7E5CB00B79549 /* UIImageView+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Network.h"; sourceTree = "<group>"; };
 		5B2B645D1BD7E5CB00B79549 /* UIImageView+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Network.m"; sourceTree = "<group>"; };
 		5B306E381BDD7FFF00B8AF95 /* VideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
+		A72DB69EB1126808612C3DDD /* Pods-FootballFlix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballFlix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootballFlix/Pods-FootballFlix.debug.xcconfig"; sourceTree = "<group>"; };
+		AF005BCC2A79785E8E90B415 /* Pods_FootballFlix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootballFlix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B0E9DF71BE031B1008448A7 /* youtube_ios_player_helper.framework in Frameworks */,
+				C9B6F1833780359B7D80FD95 /* Pods_FootballFlix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E71377FC5170DDF014ED0AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A72DB69EB1126808612C3DDD /* Pods-FootballFlix.debug.xcconfig */,
+				47DB36B5997CD8ECD83EA6FC /* Pods-FootballFlix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5B2B64101BD7E43900B79549 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +111,8 @@
 				5B2B64321BD7E43900B79549 /* FootballFlixTests */,
 				5B2B643D1BD7E43900B79549 /* FootballFlixUITests */,
 				5B2B641A1BD7E43900B79549 /* Products */,
+				3E71377FC5170DDF014ED0AE /* Pods */,
+				69CCF6F2FB81717014E4759F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +134,7 @@
 				5B2B641E1BD7E43900B79549 /* MasterViewController.swift */,
 				5B2B64201BD7E43900B79549 /* DetailViewController.swift */,
 				5B306E381BDD7FFF00B8AF95 /* VideoTableViewController.swift */,
+				5B0E9DF81BE031DD008448A7 /* videoPlayerViewController.swift */,
 				5B2B64221BD7E43900B79549 /* Main.storyboard */,
 				5B2B64251BD7E43900B79549 /* Assets.xcassets */,
 				5B2B64271BD7E43900B79549 /* LaunchScreen.storyboard */,
@@ -151,6 +173,15 @@
 			name = bin;
 			sourceTree = "<group>";
 		};
+		69CCF6F2FB81717014E4759F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B0E9DF61BE031B1008448A7 /* youtube_ios_player_helper.framework */,
+				AF005BCC2A79785E8E90B415 /* Pods_FootballFlix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B2B64431BD7E43900B79549 /* Build configuration list for PBXNativeTarget "FootballFlix" */;
 			buildPhases = (
+				C86CCA7ED1331ACA16D966E7 /* Check Pods Manifest.lock */,
 				5B2B64151BD7E43900B79549 /* Sources */,
 				5B2B64161BD7E43900B79549 /* Frameworks */,
 				5B2B64171BD7E43900B79549 /* Resources */,
+				4FD8203340475A2123405DEA /* Embed Pods Frameworks */,
+				7FA03959FD66671A9EF0037E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,6 +312,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4FD8203340475A2123405DEA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootballFlix/Pods-FootballFlix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FA03959FD66671A9EF0037E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FootballFlix/Pods-FootballFlix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C86CCA7ED1331ACA16D966E7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B2B64151BD7E43900B79549 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -289,6 +371,7 @@
 				5B2B645E1BD7E5CB00B79549 /* FTWCache.m in Sources */,
 				5B2B641D1BD7E43900B79549 /* AppDelegate.swift in Sources */,
 				5B2B645F1BD7E5CB00B79549 /* UIImageView+Network.m in Sources */,
+				5B0E9DF91BE031DD008448A7 /* videoPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,11 +509,16 @@
 		};
 		5B2B64441BD7E43900B79549 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A72DB69EB1126808612C3DDD /* Pods-FootballFlix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = FootballFlix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -444,11 +532,16 @@
 		};
 		5B2B64451BD7E43900B79549 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47DB36B5997CD8ECD83EA6FC /* Pods-FootballFlix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = FootballFlix/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

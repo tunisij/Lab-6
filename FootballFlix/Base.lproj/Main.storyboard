@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cQq-Gc-UwQ">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -26,14 +25,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K4s-Kv-1TX">
-                                <rect key="frame" x="121" y="104" width="358" height="208"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="358" id="Nxq-Sy-Qb7"/>
-                                    <constraint firstAttribute="height" constant="208" id="kQ2-lF-2fY"/>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CeY-Ac-G8l">
                                 <rect key="frame" x="20" y="320" width="560" height="267"/>
                                 <animations/>
@@ -41,9 +32,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K4s-Kv-1TX">
+                                <rect key="frame" x="121" y="104" width="358" height="208"/>
+                                <animations/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="Nxq-Sy-Qb7"/>
+                                    <constraint firstAttribute="height" constant="208" id="kQ2-lF-2fY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="K4s-Kv-1TX" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="CtT-Tz-2YB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0XM-y9-sOw" secondAttribute="leading" id="DOF-Ru-v0T"/>
@@ -55,6 +56,9 @@
                             <constraint firstItem="0XM-y9-sOw" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" id="blP-7h-2Lg"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CeY-Ac-G8l" secondAttribute="leading" id="gRl-jC-7Mt"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6Ci-i4-5g0" appends="YES" id="5UM-Op-aI0"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM">
@@ -64,11 +68,46 @@
                         <outlet property="videoDescription" destination="CeY-Ac-G8l" id="uqV-mR-n9D"/>
                         <outlet property="videoImage" destination="K4s-Kv-1TX" id="6lv-CP-chA"/>
                         <outlet property="videoTitle" destination="0XM-y9-sOw" id="ILC-8i-agu"/>
+                        <segue destination="bao-ga-oH7" kind="show" identifier="playVideo" id="pah-E6-MdV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6Ci-i4-5g0">
+                    <connections>
+                        <action selector="imageTapped:" destination="JEX-9P-axG" id="Zxh-NA-WAW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="709" y="885"/>
+        </scene>
+        <!--Video Player View Controller-->
+        <scene sceneID="XWG-z5-HPb">
+            <objects>
+                <viewController id="bao-ga-oH7" customClass="videoPlayerViewController" customModule="FootballFlix" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ca-zD-Tmf"/>
+                        <viewControllerLayoutGuide type="bottom" id="IUf-PO-6AL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3rj-ds-RXW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZ7-rT-ta0" customClass="YTPlayerView">
+                                <rect key="frame" x="15" y="20" width="302" height="295"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="jZ7-rT-ta0" id="Z8q-27-KMW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLZ-mc-2Wn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1474" y="885"/>
         </scene>
         <!--Channel View Controller-->
         <scene sceneID="RFC-ac-uSn">

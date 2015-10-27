@@ -13,6 +13,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var videoImage: UIImageView!
     @IBOutlet weak var videoDescription: UITextView!
+    
+    var videoId: String? = nil
 
     var detailItem: Dictionary<String, AnyObject>? {
         didSet {
@@ -22,6 +24,9 @@ class DetailViewController: UIViewController {
     
     func configureView() {
         if let detail = self.detailItem {
+            if let id = detail["id"] as? Dictionary<String, AnyObject> {
+                videoId = id["videoId"] as? String
+            }
             if let snippet = detail["snippet"] as? Dictionary<String,AnyObject> {
                 if let title = self.videoTitle {
                     title.text = snippet["title"] as? String
@@ -39,6 +44,17 @@ class DetailViewController: UIViewController {
                     }
                 }
             }
+        }
+    }
+    
+    @IBAction func imageTapped(sender: UITapGestureRecognizer) {
+        self.performSegueWithIdentifier("playVideo", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "playVideo" {
+            let controller = segue.destinationViewController as! videoPlayerViewController
+            controller.videoId = videoId
         }
     }
     
