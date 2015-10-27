@@ -9,10 +9,8 @@
 
 class VideoTableViewController: UITableViewController {
     
-    var tableViewController: UITableViewController? = nil
     var objects = [AnyObject]()
     var channelId: String? = nil
-    
     
     var detailItem: Dictionary<String, AnyObject>? {
         didSet {
@@ -45,7 +43,6 @@ class VideoTableViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func pullToRefreshActivated(sender: UIRefreshControl) {
@@ -54,7 +51,6 @@ class VideoTableViewController: UITableViewController {
     }
     
     func loadVideos(channelId: String) {
-        // Get ready to fetch the list of dog videos from YouTube V3 Data API.
         let url = NSURL(string: "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=\(channelId)&key=AIzaSyCRONSh1St96OARUlZSJiWfi6EAhaFEPZw")
         let session = NSURLSession.sharedSession()
         let task = session.downloadTaskWithURL(url!) {
@@ -64,13 +60,11 @@ class VideoTableViewController: UITableViewController {
                 return
             }
             
-            // print out the fetched string for debug purposes.
             let d = NSData(contentsOfURL: loc!)!
             print("got data")
             let datastring = NSString(data: d, encoding: NSUTF8StringEncoding)
             print(datastring)
             
-            // Parse the top level  JSON object.
             let parsedObject: AnyObject?
             do {
                 parsedObject = try NSJSONSerialization.JSONObjectWithData(d,
@@ -82,7 +76,6 @@ class VideoTableViewController: UITableViewController {
                 fatalError()
             }
             
-            // retrieve the individual videos from the JSON document.
             if let topLevelObj = parsedObject as? Dictionary<String,AnyObject> {
                 if let items = topLevelObj["items"] as? Array<Dictionary<String,AnyObject>> {
                     for i in items {
@@ -97,29 +90,20 @@ class VideoTableViewController: UITableViewController {
             }
         }
         
-        
         (UIApplication.sharedApplication().delegate as! AppDelegate).incrementNetworkActivity()
         task.resume()
         
     }
     
-    
-    
-    // MARK: - Segues
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] as! Dictionary<String, AnyObject>
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                let controller = segue.destinationViewController as! DetailViewController
                 controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
-    
-    // MARK: - Table View
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -148,11 +132,8 @@ class VideoTableViewController: UITableViewController {
                         }
                     }
                 }
-                
-                
             }
         }
-        
         return cell
     }
 }

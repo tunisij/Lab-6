@@ -13,18 +13,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var videoImage: UIImageView!
     @IBOutlet weak var videoDescription: UITextView!
-    
-    
-    
+
     var detailItem: Dictionary<String, AnyObject>? {
         didSet {
-            // Update the view.
             self.configureView()
         }
     }
     
     func configureView() {
-        // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let snippet = detail["snippet"] as? Dictionary<String,AnyObject> {
                 if let title = self.videoTitle {
@@ -42,23 +38,18 @@ class DetailViewController: UIViewController {
                         }
                     }
                 }
-                
             }
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
     
 }
 
